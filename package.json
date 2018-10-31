@@ -1,0 +1,28 @@
+{
+  "name": "homelike",
+  "version": "1.0.0",
+  "description": "coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "i-server": "npm i --prefix server",
+    "i-client": "npm i --prefix client",
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client",
+    "install": "concurrently \"npm run i-server\" \"npm run i-client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shutsugan/homelike.git"
+  },
+  "keywords": [],
+  "author": "Mohamed Tajjiou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shutsugan/homelike/issues"
+  },
+  "homepage": "https://github.com/shutsugan/homelike#readme",
+  "dependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
