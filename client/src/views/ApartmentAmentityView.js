@@ -1,20 +1,18 @@
 import React from 'react';
-
-const setApartmentAmentity = (item, index, limit) => {
-  if (index < limit) {
-    return (
-      <span className="_1h9l4w0vvX6d56ZnJ3NLod" key={index}>
-        <i></i>
-        <span>{item}</span>
-      </span>
-    );
-  }
-};
+import AmentityLabel from './AmentityLabel';
 
 const ApartmentAmentityView = ({apartment, limit = 3}) => {
-  return apartment.amenities.filter((item, index) => {
-    return setApartmentAmentity(item, index, limit);
-  });
+  return (
+    <div className="f9YmKwMaSOdtYnk_Qz-iT">
+				<div className="dVjtBg_ihJ63cZB8GwE0g text-truncate">
+          {
+            apartment.amenities
+              .filter((item, index) => (index < limit) ? true : false)
+              .map((item, index) => <AmentityLabel item={item} key={index} />)
+          }
+        </div>
+    </div>
+  )
 }
 
 export default ApartmentAmentityView;

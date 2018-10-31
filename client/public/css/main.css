@@ -267,6 +267,25 @@ img {
   padding-right: 5px;
 }
 
+.amentity-label {
+  background: #4f8abc;
+  color: #FFF;
+  padding: 3px 8px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mr-bt-10 {
+  margin-bottom: 10px;
+}
+
 .dVjtBg_ihJ63cZB8GwE0g i {
   padding-right: 1px;
   -webkit-text-stroke: .6px #fff;
@@ -286,7 +305,8 @@ img {
 ._17om8IEGFeu2W2TBOJ6xQs {
   color: #000;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 600;
+  margin-top: -5px;
 }
 
 ._3-hUUH6d0vGND3vUzaybD0 {
@@ -295,7 +315,7 @@ img {
 
 .f9YmKwMaSOdtYnk_Qz-iT {
   position: relative;
-  height: 20px;
+  height: 25px;
   color: #999;
   font-size: 14px;
 }
