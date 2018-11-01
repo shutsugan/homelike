@@ -1,7 +1,8 @@
 import React from 'react';
 import ApartmentAmentityView from './ApartmentAmentityView';
+import ApartmentOwnerView from './ApartmentOwnerView';
 
-const ApartmentInfoView = ({apartment}) => (
+const ApartmentInfoView = ({apartment, owner}) => (
 	<div className="listing-details-container">
 		<div className="listing-details">
 			<div className="flex-row mr-bt-10">
@@ -14,7 +15,10 @@ const ApartmentInfoView = ({apartment}) => (
 					<span>{apartment.size} m²</span>
 				</div>
 			</div>
-			<ApartmentAmentityView apartment={apartment} />
+			<div className="flex-row">
+				<ApartmentAmentityView apartment={apartment} />
+				{owner ? <ApartmentOwnerView email={apartment.owner.email} /> : ''}
+			</div>
 		</div>
 	</div>
 );

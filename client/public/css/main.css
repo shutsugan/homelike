@@ -375,3 +375,23 @@ img {
     transform: rotate(360deg);
   }
 }
+
+.owner {
+  font-size: 0.9em;
+  background: #dedede;
+  border-radius: 20px;
+  padding-right: 4px;
+}
+
+.owner-label {
+  height: 100%;
+  background: #767676;
+  color: #FFF;
+  padding: 2.5px 8px;
+  border-radius: 20px 0px 0 20px;
+  margin-right: 4px;
+}
+
+.owner-email {
+  padding: 2px 4px;
+}
