@@ -22,7 +22,7 @@ export class ApartmentView extends Component {
 
     return (
       <div className='container-fl clearfix'>
-        <div className='col-12'>
+        <div className='col-12 pd-16'>
           <div className='view-apartment'>
             <div className="view-apartment-item">
               <div className="view-apartment-item-content">
