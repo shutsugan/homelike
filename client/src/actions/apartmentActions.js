@@ -1,15 +1,15 @@
-import {FETCH_APARTMENT} from "./types";
 import gql from "graphql-tag";
+import {FETCH_APARTMENT} from "./types";
 import client from './../ApolloClient'
 
-export const fetchApartment = (_id) => dispatch => {
+export const fetchApartment = _id => dispatch => {
   client.query({
     query: gql`
     {
       apartment(_id: "${_id}") {
         _id
         owner {
-        _id
+          _id
           email
         } 
         title
