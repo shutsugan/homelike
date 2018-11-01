@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchApartmentsList} from './../actions/apartmentsListActions';
 import ApartmentTileView from "./ApartmentTileView";
+import Spinner from './Spinner';
 
 class HomeView extends React.Component {
   componentWillMount() {
@@ -9,18 +10,17 @@ class HomeView extends React.Component {
   }
 
   render() {
-    let {apartmentsList} = this.props;
-    if (!Object.keys(apartmentsList).length) {
-        return <div>Loading...</div>
-    }
+    const {apartmentsList} = this.props;
+    if (!Object.keys(apartmentsList).length) return <Spinner />
 
     return (
       <div className="container-list container-lg clearfix">
         <div className="col-12 float-left">
           <div className="view-apartment-list">
-            {apartmentsList.items.map((item, index) => (
-                <ApartmentTileView key={index} apartment={item} />
-            ))}
+            {
+              apartmentsList.items
+                .map((item, index) => <ApartmentTileView key={index} apartment={item} />)
+            }
           </div>
         </div>
       </div>
