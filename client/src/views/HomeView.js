@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 import {fetchApartmentsList} from './../actions/apartmentsListActions';
 import ApartmentTileView from "./ApartmentTileView";
 import Spinner from './Spinner';
 
-class HomeView extends React.Component {
-  componentWillMount() {
+class HomeView extends Component {
+  componentDidMount() {
     this.props.fetchApartmentsList();
   }
 
