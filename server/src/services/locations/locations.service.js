@@ -5,9 +5,7 @@ module.exports = function() {
   const app = this;
   const mongoClient = app.get('mongoClient');
 
-  const apartmentService = createService({});
-  app.use('/locations', apartmentService);
-
+  app.use('/locations', createService({}));
   const service = app.service('locations');
 
   mongoClient.then(db => {

@@ -8,8 +8,11 @@ export default function (Users, Locations) {
           .then(result => result[0]);
       },
       location: (apartment) => {
-        return Locations.find({ query: { _id: apartment.location }})
-          .then(result => result[0]);
+        return Locations.find()
+          .then(result => {
+            const location =  result.filter(loc => loc._id === apartment.location)
+            return location.pop();
+          });
       },
       details: (apartment) => {
         return apartment.detail;
