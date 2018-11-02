@@ -17,7 +17,7 @@ const ApartmentInfoView = ({apartment, owner}) => (
 			</div>
 			<div className="flex-row">
 				<ApartmentAmentityView apartment={apartment} />
-				{owner ? <ApartmentOwnerView email={apartment.owner.email} /> : ''}
+				{owner ? <ApartmentOwnerView owner={apartment.owner} /> : ''}
 			</div>
 		</div>
 	</div>

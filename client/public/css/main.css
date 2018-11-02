@@ -376,19 +376,23 @@ img {
 }
 
 .owner {
+  display: flex;
   font-size: 0.9em;
   background: #dedede;
   border-radius: 20px;
   padding-right: 4px;
+  margin-bottom: 4px;
 }
 
 .owner-label {
+  width: 80px;
   height: 100%;
   background: #767676;
   color: #FFF;
   padding: 2.5px 8px;
   border-radius: 20px 0px 0 20px;
   margin-right: 4px;
+  text-align: right;
 }
 
 .owner-email {
