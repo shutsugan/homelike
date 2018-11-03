@@ -8,7 +8,7 @@ import store from './store';
 
 import HomeView from './views/HomeView';
 import ApartmentView from './views/ApartmentView';
-import Locations from './views/Locations';
+import LocationsView from './views/LocationsView';
 
 const App = _ => (
   <ApolloProvider client={client}>
@@ -24,7 +24,7 @@ const App = _ => (
           <Route
             exast
             path="/locations"
-            component={Locations}
+            component={LocationsView}
           />
         </div>
       </Router>
