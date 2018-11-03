@@ -1,7 +1,7 @@
 import React from 'react';
 import ApartmentCardView from './ApartmentCardView'
 
-const ApartmentTileView = ({apartment}) => {
+const ApartmentTileView = ({apartment, loc}) => {
   let url = `/apartments/${apartment._id}`;
   let image = `http://localhost:5000/images/apartments/${apartment.images[0]}`;
 
@@ -9,7 +9,11 @@ const ApartmentTileView = ({apartment}) => {
     <div className="view-apartment-item">
       <div className="view-apartment-item-content">
         <a target ="_blank" href={url}>
-          <ApartmentCardView apartment={apartment} image={image} />
+          <ApartmentCardView 
+            apartment={apartment} 
+            image={image} 
+            loc={loc}
+          />
         </a>
       </div>
     </div>

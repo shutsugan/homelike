@@ -26,7 +26,11 @@ export class ApartmentView extends Component {
           <div className='view-apartment'>
             <div className="view-apartment-item">
               <div className="view-apartment-item-content">
-                <ApartmentCardView apartment={apartment} image={image} owner={true} />
+                <ApartmentCardView 
+                  apartment={apartment} 
+                  image={image} 
+                  owner={true} 
+                />
               </div>
             </div>
           </div>

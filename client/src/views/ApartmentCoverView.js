@@ -1,7 +1,9 @@
 import React from 'react';
-import ApartmentPriceView from './ApartmentPriceView';
 
-const ApartmentCoverView = ({price, image}) => (
+import ApartmentPriceView from './ApartmentPriceView';
+import ApartmentLocationView from './ApartmentLocationView';
+
+const ApartmentCoverView = ({price, image, location, loc}) => (
 	<div className="listing-image">
 		<div 
 			className="media-cover" 
@@ -12,6 +14,7 @@ const ApartmentCoverView = ({price, image}) => (
 			}}
 		></div>
 		<ApartmentPriceView price={price} />
+		{loc ? <ApartmentLocationView location={location} /> : ''}
 	</div>
 );
 
