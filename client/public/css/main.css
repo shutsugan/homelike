@@ -447,3 +447,36 @@ nav ul li.current a {
 .nav ul li a:hover {
   color: #4f8abc;
 }
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.search-bar__input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+.search-bar__input-container label {
+  font-size: .7em;
+  font-weight: bold;
+}
+
+.search-bar__input-container input {
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: #4f8abc;
+}
