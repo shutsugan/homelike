@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {fetchApartmentsList} from './../actions/apartmentsListActions';
-import ApartmentTileView from "./ApartmentTileView";
+import ApartmentTileView from './ApartmentTileView';
+import ApartmentNavView from './ApartmentNavView';
 import Spinner from './Spinner';
 
 const compareLocations = (a, b) => {
@@ -23,6 +24,7 @@ class HomeView extends Component {
 
     return (
       <div className="container-list container-lg clearfix">
+        <ApartmentNavView current="locations" />
         <div className="col-12 float-left">
           <div className="view-apartment-list">
             {

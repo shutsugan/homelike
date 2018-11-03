@@ -414,3 +414,36 @@ img {
   padding: 4px 8px;
   border-radius: 14px;
 }
+
+.nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav ul li {
+  padding: 8px 16px;
+  border-right: solid 1px #23292d;
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+nav ul li.current a {
+  font-weight: bold;
+  color: #4f8abc;
+}
+
+.nav ul li a {
+  font-size: 1em;
+  font-weight: normal;
+  color: #23292d;
+  transition: color .3s;
+}
+
+.nav ul li a:hover {
+  color: #4f8abc;
+}
