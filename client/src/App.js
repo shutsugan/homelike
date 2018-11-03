@@ -9,6 +9,7 @@ import store from './store';
 import HomeView from './views/HomeView';
 import ApartmentView from './views/ApartmentView';
 import LocationsView from './views/LocationsView';
+import SearchView from './views/SearchView';
 
 const App = _ => (
   <ApolloProvider client={client}>
@@ -25,6 +26,11 @@ const App = _ => (
             exast
             path="/locations"
             component={LocationsView}
+          />
+          <Route
+            exast
+            path="/search"
+            component={SearchView}
           />
         </div>
       </Router>

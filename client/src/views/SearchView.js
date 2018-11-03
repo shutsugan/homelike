@@ -4,41 +4,38 @@ import {connect} from 'react-redux';
 import {fetchApartmentsList} from './../actions/apartmentsListActions';
 import ApartmentTileView from './ApartmentTileView';
 import ApartmentNavView from './ApartmentNavView';
+import ApartmentSearchBarView from './ApartmentSearchBarView';
 import Spinner from './Spinner';
 
-const compareLocations = (a, b) => {
-	if (a.location.title < b.location.title) return -1;
-	if (a.location.title > b.location.title) return 1;
-
-	return 0;
-}
-
-class HomeView extends Component {
+class SearchView extends Component {
   componentDidMount() {
     this.props.fetchApartmentsList();
   }
 
+  handleChange = arg => {
+    console.log(arg);
+  }
+
   render() {
-		const {apartmentsList} = this.props;
+    const {apartmentsList} = this.props;
     if (!Object.keys(apartmentsList).length) return <Spinner />
+
+    console.log(apartmentsList);
 
     return (
       <div className="container-list container-lg clearfix">
-        <ApartmentNavView current="locations" />
+        <ApartmentNavView current="search" />
+        <ApartmentSearchBarView 
+          apartments={apartmentsList} 
+          onChange={this.handleChange} 
+        />
         <div className="col-12 float-left">
           <div className="view-apartment-list">
             {
-							apartmentsList.items
-							.sort(compareLocations)
+              apartmentsList.items
                 .map((item, index) => {
-									return (
-										<ApartmentTileView 
-											key={index} 
-											apartment={item} 
-											loc={true} 
-										/>
-									);
-								})
+                  return <ApartmentTileView key={index} apartment={item} />
+                })
             }
           </div>
         </div>
@@ -51,4 +48,4 @@ const mapStateToProps = state => ({
   apartmentsList: state.apartmentsList.apartments
 });
 
-export default connect(mapStateToProps, {fetchApartmentsList})(HomeView)
+export default connect(mapStateToProps, {fetchApartmentsList})(SearchView)

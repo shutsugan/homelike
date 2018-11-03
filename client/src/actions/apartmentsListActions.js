@@ -27,6 +27,13 @@ export const fetchApartmentsList = _ => dispatch => {
           price
           amenities
           images
+          details {
+            rooms
+            bedrooms
+            floor
+            bathrooms
+          } 
+          services 
         }
       }
     }`
