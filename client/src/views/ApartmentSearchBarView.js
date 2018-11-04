@@ -3,7 +3,9 @@ import React, {Component} from 'react';
 import SearchInputView from './SearchInputView';
 
 const mergeObjects = (items, container, key) => {
-	items.forEach(item => container[key].push(item[key]));
+	(key === 'location')
+		? items.forEach(item => container[key].push(item[key].title))
+		: items.forEach(item => container[key].push(item[key]))
 };
 
 const mergeArrays = (arr) => [...new Set([].concat(...arr))];
@@ -38,7 +40,7 @@ class ApartmentSearchBarView extends Component {
 		this.state = {
 				size,
 				price,
-				location,
+				location: mergeArrays(location),
 				amenities: mergeArrays(amenities),
 				services: mergeArrays(services)
 		}
@@ -66,7 +68,6 @@ class ApartmentSearchBarView extends Component {
 								name={key} 
 								items={this.state[key]}
 								handleChange={this.handleChange}
-								location={key === 'location'}
 							/>
 						);
 					})
