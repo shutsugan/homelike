@@ -56,11 +56,11 @@ class ApartmentSearchBarView extends Component {
 			<div className="search-bar">
 				{
 					[
+						'location',
 						'size', 
 						'price', 
 						'amenities', 
-						'services', 
-						'location'
+						'services' 
 					].map((key, index) => {
 						return (
 							<SearchInputView
