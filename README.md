@@ -19,7 +19,7 @@ To run the app:
 $ npm run install
 ```
 
-## Dev Setup
+### Dev Setup
 
 ``` bash
 # serve with hot reload at localhost:3000
@@ -30,7 +30,7 @@ $ npm run dev
 
 ## What I did
 
-1. I've refactored the code and fixed some issue related with the server
+1. I've refactored the code and fixed some issue related to the server
     - the git commits describe the steps that I followed.
 
 2. I didn't add a webpack, because the projects created using ```create-react-app``` already had webpack configuration.
