@@ -30,8 +30,6 @@ class SearchView extends Component {
     const search_apartments = apartmentsList.items
       .filter(apartment => this.compareApartmentInfo(apartment));
 
-    console.log(search_apartments);
-
     this.setState({apartments: search_apartments});
   }
 
@@ -81,6 +79,7 @@ class SearchView extends Component {
   render() {
     const {apartmentsList} = this.props;
     const list = this.state.apartments
+    
     if (!Object.keys(apartmentsList).length) return <Spinner />
 
     return (

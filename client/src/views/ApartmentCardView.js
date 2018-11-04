@@ -9,7 +9,7 @@ const ApartmentCardView = ({apartment, image, owner, loc}) => (
 			image={image} 
 			price={apartment.price} 
 			location={apartment.location.title}
-			loc={loc} 
+			loc={loc}
 		/>
 		<ApartmentInfoView 
 			apartment={apartment} 

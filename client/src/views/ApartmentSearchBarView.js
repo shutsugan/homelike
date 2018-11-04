@@ -38,11 +38,11 @@ class ApartmentSearchBarView extends Component {
 		} = container;
 
 		this.state = {
-				size,
-				price,
-				location: mergeArrays(location),
-				amenities: mergeArrays(amenities),
-				services: mergeArrays(services)
+			size,
+			price,
+			location: mergeArrays(location),
+			amenities: mergeArrays(amenities),
+			services: mergeArrays(services)
 		}
 	}
 

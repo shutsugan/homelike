@@ -4,6 +4,6 @@ import apartmentReducer from './apartmentReducer';
 
 
 export default combineReducers({
-    apartmentsList: apartmentsListReducer,
-    apartmentItem: apartmentReducer,
+	apartmentsList: apartmentsListReducer,
+	apartmentItem: apartmentReducer,
 })
